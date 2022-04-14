@@ -4,6 +4,7 @@
 /dist/
 /tmp/
 notes.txt
+*.env
 
 # dependencies
 /bower_components/

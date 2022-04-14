@@ -3,3 +3,14 @@
 <div class="new-round-btn btn-block">
     <button class="btn btn-md">{{#link-to 'new-round'}}<a href="" style="color: white;">New Round</a>{{/link-to}}</button>
 </div>
+{{#each model as |round|}}
+  <div class="col-md-3 panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{round.courseName}}</h3>
+    </div>
+    <div>
+        <p>Score: {{round.score}}</p>
+        <p>Putts: {{round.putts}}</p>
+    </div>
+  </div>
+{{/each}}
