@@ -1,16 +1,16 @@
 <h3>{{title}}</h3>
 <hr>
+
 <div class="new-round-btn btn-block">
-    <button class="btn btn-md">{{#link-to 'new-round'}}<a href="" style="color: white;">New Round</a>{{/link-to}}</button>
+  <button class="btn btn-md">{{#link-to 'new-round'}}<a href="" style="color: white;">New Round</a>{{/link-to}}</button>
+</div>  
+<div class="row">
+  {{#each model as |round|}}
+    <div class="col-sm-3 panel panel-default custom-panel">
+      <div class="panel-heading">{{round.courseName}}</div>
+      <div class="panel-body">
+          <p>{{round.datePlayed}}</p>
+      </div>
+    </div>
+  {{/each}}
 </div>
-{{#each model as |round|}}
-  <div class="col-md-3 panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">{{round.courseName}}</h3>
-    </div>
-    <div>
-        <p>Score: {{round.score}}</p>
-        <p>Putts: {{round.putts}}</p>
-    </div>
-  </div>
-{{/each}}
