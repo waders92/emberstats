@@ -1,0 +1,80 @@
+<h3>{{title}}</h3>
+<hr>
+
+<div class="testbox">
+  <form action="/">
+    <div class="row">
+        <div class="col-md-6 item">
+            <p>Course</p>
+            <div>
+            {{input type="text" name="name" placeholder="Course Name" value=courseName}}
+            </div>
+        </div>
+        <div class="col-md-6 item">
+            <p>Date Played</p>
+            {{input type="date" name="name" value=datePlayed}}
+            <i class="fas fa-calendar-alt"></i>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 item">
+            <p>Score</p>
+            {{input type="number" name="score" value=score}}
+        </div>
+        <div class="col-md-3 item">
+            <p>Putts Total</p>
+            {{input type="number" name="putts" value=putts}}
+        </div>
+        <div class="col-md-6 item">
+        <p>Holes Played</p>
+        <select  onchange={{action "setHolesPlayed" value="target.value"}}>
+            <option value="">Please select</option>
+            <option value="9">9</option>
+            <option value="18">18</option>
+        </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 item">
+            <p>Greens Hit</p>
+            {{input type="number" name="greenshit" value=girCount}}
+        </div>
+        <div class="col-md-3 item">
+            <p>Greens Total</p>
+            {{input type="number" name="greenstotal" value=girTotal}}
+        </div>
+        <div class="col-md-6 item">
+            <p>Greens Miss Direction</p>
+            <select onchange={{action "setGreenMissDirection" value="target.value"}}>
+                <option value="">Please select</option>
+                <option value="L">Left</option>
+                <option value="R">Right</option>
+                <option value="S">Short</option>
+                <option value="N">Long</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 item">
+            <p>Fairways Hit</p>
+            {{input type="number" name="fwy" value=fwyCount}}
+        </div>
+        <div class="col-md-3 item">
+            <p>Fairways Total</p>
+            {{input type="number" name="fwystotal" value=fwyTotal}}
+        </div>
+        <div class="col-md-6 item">
+            <p>Fairway Miss Direction</p>
+            <select onchange={{action "setFwyMissDirection" value="target.value"}}>
+                <option value="">Please select</option>
+                <option value="L">Left</option>
+                <option value="R">Right</option>
+            </select>
+        </div>
+    </div>
+    <div class="btn-block new-round-form-buttons">
+        <button type="submit" href="/" {{action 'saveRound'}} disabled={{this.formValid}}>Submit</button>
+        <button class="cancel-new-round" {{action 'clearForm'}}>{{#link-to 'dashboard' preventDefault=false}}Cancel{{/link-to}}</button>
+    </div>
+  </form>
+</div>

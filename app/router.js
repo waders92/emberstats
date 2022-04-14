@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('dashboard');
+  this.route('home');
+  this.route('new-round');
 });
 
 export default Router;
