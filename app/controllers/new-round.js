@@ -34,7 +34,35 @@ export default Controller.extend({
 
     actions: {
         saveRound() {
-            alert('Saving');
+            const courseName = this.get('courseName');
+            const datePlayed = this.get('datePlayed');
+            const score = this.get('score');
+            const putts = this.get('putts');
+            const holesPlayed = this.get('holesPlayed');
+            const girCount = this.get('girCount');
+            const girTotal = this.get('girTotal');
+            const greenMissDir = this.get('greenMissDir');
+            const fwyCount = this.get('fwyCount');
+            const fwyTotal = this.get('fwyTotal');
+            const fwyMissDir = this.get('fwyMissDir');
+
+            const newRound = this.store.createRecord('round', {
+                courseName,
+                datePlayed,
+                score,
+                putts,
+                holesPlayed,
+                girCount,
+                girTotal,
+                greenMissDir,
+                fwyCount,
+                fwyTotal,
+                fwyMissDir
+            });
+
+            newRound.save().then(response => {
+                console.log('Response....', response);
+            });
         },
 
         setHolesPlayed: function(selected) {
