@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="btn-block new-round-form-buttons">
-        <button type="submit" href="/" {{action 'saveRound'}} disabled={{this.formValid}}>Submit</button>
+        <button type="submit" href="/" {{action 'saveRound'}} disabled={{this.formInvalid}}>Submit</button>
         <button class="cancel-new-round" {{action 'clearForm'}}>{{#link-to 'dashboard' preventDefault=false}}Cancel{{/link-to}}</button>
     </div>
   </form>

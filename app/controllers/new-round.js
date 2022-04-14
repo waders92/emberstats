@@ -14,7 +14,7 @@ export default Controller.extend({
     fwyCount: null,
     fwyTotal: null,
     fwyMissDir: null,
-    formValid: computed('courseName', 'datePlayed', 'score', 'putts', 'holesPlayed', 'girCount', 'girTotal', 'greenMissDir', 'fwyCount', 'fwyTotal', 'fwyMissDir', function() {
+    formInvalid: computed('courseName', 'datePlayed', 'score', 'putts', 'holesPlayed', 'girCount', 'girTotal', 'greenMissDir', 'fwyCount', 'fwyTotal', 'fwyMissDir', function() {
         const formFields = [
             this.get('courseName'),
             this.get('datePlayed'),
