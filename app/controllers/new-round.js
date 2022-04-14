@@ -61,7 +61,7 @@ export default Controller.extend({
             });
 
             newRound.save().then(response => {
-                console.log('Response....', response);
+                this.transitionToRoute('dashboard');
             });
         },
 
