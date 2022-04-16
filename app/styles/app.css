@@ -64,6 +64,10 @@ img.hole-num-img {
     margin-top: -7px;
 }
 
+.metric {
+	text-align: center;
+}
+
 .custom-panel {
 	padding: 0;
 	box-shadow: 1px 1px 1px lightgray;
@@ -109,7 +113,11 @@ button[disabled], button[disabled]:hover {
 	margin-bottom: 50px;
 }
 
-.new-round-btn button {
+button.new-round-btn a:hover  {
+	text-decoration: none;
+}
+
+button.new-round-btn  {
 	float: right;
 }
 
@@ -238,4 +246,8 @@ html, body {
 	}
 	button:hover {
 	background-color: #0666a3;
+	}
+
+	.mb-25 {
+		margin-bottom: 25px;
 	}

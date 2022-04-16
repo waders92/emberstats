@@ -1,22 +1,12 @@
 <h3>{{title}}</h3>
 <hr>
-
-<div class="new-round-btn btn-block">
-  <button class="btn btn-md">{{#link-to 'new-round'}}<a href="" style="color: white;">New Round</a>{{/link-to}}</button>
-</div>  
 <div class="row">
+  <div class="btn-block">
+    <button class="btn new-round-btn">{{#link-to 'new-round'}}<a href="" style="color: white;">New Round</a>{{/link-to}}</button>
+  </div> 
+</div>
+<div class="row"> 
   {{#each model as |round|}}
-    <div class="col-sm-2 panel panel-default custom-panel">
-      <div class="panel-heading">{{round.courseName}}
-        {{#if (isnine round.holesPlayed)}}
-          <img class="hole-num-img" src="/assets/images/number-9.png">
-        {{else}}
-          <img class="hole-num-img" src="/assets/images/number-18.png">
-        {{/if}}
-      </div>
-      <div class="panel-body">
-          <p>{{dateformat round.datePlayed}}</p>
-      </div>
-    </div>
+    {{card-overview round=round}}
   {{/each}}
 </div>
