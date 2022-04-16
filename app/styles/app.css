@@ -57,6 +57,13 @@ a.db-link {
 	text-decoration: none;
 }
 
+img.hole-num-img {
+	height: 35px;
+    width: 35px;
+    float: right;
+    margin-top: -7px;
+}
+
 .custom-panel {
 	padding: 0;
 	box-shadow: 1px 1px 1px lightgray;
