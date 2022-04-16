@@ -6,10 +6,10 @@
 </div>  
 <div class="row">
   {{#each model as |round|}}
-    <div class="col-sm-3 panel panel-default custom-panel">
+    <div class="col-sm-2 panel panel-default custom-panel">
       <div class="panel-heading">{{round.courseName}}</div>
       <div class="panel-body">
-          <p>{{round.datePlayed}}</p>
+          <p>{{dateformat round.datePlayed}}</p>
       </div>
     </div>
   {{/each}}

@@ -60,6 +60,7 @@ a.db-link {
 .custom-panel {
 	padding: 0;
 	box-shadow: 1px 1px 1px lightgray;
+	margin: 20px;
 }
 
 .main-nav a:focus {
