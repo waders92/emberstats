@@ -6,7 +6,24 @@
   </div> 
 </div>
 <div class="row"> 
-  {{#each model as |round|}}
-    {{card-overview round=round}}
-  {{/each}}
+  <div class="col-md-8">
+      <table class="table">
+        <tr>
+          <th class="table__heading">Course</th>
+          <th class="table__heading">Date Played</th>
+          <th class="table__heading">Gir</th>
+          <th class="table__heading">Fwy</th>
+          <th class="table__heading">Putts</th>
+        </tr>
+        {{#each model as |round|}}
+          <tr class="table__row">
+            <td class="table__content" data-heading="Course">{{round.courseName}}</td>
+            <td class="table__content" data-heading="Date Played">{{dateformat round.datePlayed}}</td>
+            <td class="table__content" data-heading="Gir">{{percentformat round.girCount round.girTotal}}%</td>
+            <td class="table__content" data-heading="Fwy">{{percentformat round.fwyCount round.fwyTotal}}%</td>
+            <td class="table__content" data-heading="Putts">{{round.putts}}</td>
+          </tr>  
+        {{/each}}
+      </table>
+  </div>
 </div>
