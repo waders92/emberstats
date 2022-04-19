@@ -4,7 +4,7 @@ import Ember from 'ember';
 export default Controller.extend({
     title: 'Dashboard',
 
-    months: Ember.computed('model.@each.datePlayed', function() {
+    months: Ember.computed('model', function() {
         let rounds = this.get('model');
         let months = [];
         
@@ -16,5 +16,7 @@ export default Controller.extend({
 
         months = new Set(months.reverse());
         return months;
-    })
+    }),
+
+    currentYear: new Date().getFullYear()
 });

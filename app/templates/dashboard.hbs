@@ -1,14 +1,14 @@
 <h3>{{title}}</h3>
 <hr>
 <div class="row">
-      <div class="btn-block">
-         <button class="btn new-round-btn">{{#link-to 'new-round'}}<a href="" style="color: white;">New Round</a>{{/link-to}}</button>
-    </div> 
+  <div class="btn-block">
+      <button class="btn new-round-btn">{{#link-to 'new-round'}}<a href="" style="color: white;">New Round</a>{{/link-to}}</button>
+  </div> 
 </div>
 
 <div class="container">
   <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#home">About</a></li>
+      <li class="active"><a data-toggle="tab" href="#home">{{currentYear}}</a></li>
       {{#each months as |month|}}
           <li><a data-toggle="tab" href="#{{month}}">{{month}}</a></li>
       {{/each}}

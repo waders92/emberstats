@@ -1,0 +1,27 @@
+<div class="col-sm-3 panel panel-default custom-panel">
+          <div class="panel-heading"><b>{{round.courseName}}</b>
+            {{#if (isnine round.holesPlayed)}}
+              <img class="hole-num-img" src="/assets/images/number-9.png">
+            {{else}}
+              <img class="hole-num-img" src="/assets/images/number-18.png">
+            {{/if}}
+          </div>
+          <div class="panel-body">
+              <p>{{dateformat round.datePlayed}}</p>
+              <hr>
+          </div>
+          <div class="row mb-25">
+              <div class="col-sm-4 metric">
+                  <p><b>Score</b></p>
+                  <p><b>{{round.score}}</b></p>
+              </div>
+              <div class="col-sm-4 metric">
+                  <p>Fwy</p>
+                  <p>{{percentformat round.fwyCount round.fwyTotal}}%</p>
+              </div>
+              <div class="col-sm-4 metric">
+                  <p>Gir</p>
+                  <p>{{percentformat round.girCount round.girTotal}}%</p>
+              </div>
+          </div>
+        </div>
