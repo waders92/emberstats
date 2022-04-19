@@ -256,6 +256,15 @@ html, body {
 		margin-top: 50px;
 	}
 
+	.stats {
+		margin-left: 22px;
+	}
+
+	.stats p {
+		margin-right: 25px;
+		display: inline-flex;
+	}
+
 	td, th { padding: 8px; padding: .5rem;
 	}
 	

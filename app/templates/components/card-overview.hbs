@@ -1,13 +1,31 @@
-    <div class="row mt-50">
-      {{#each eighteens as |round|}}
-        {{card-detail round=round}}
-      {{/each}}
+    {{#if eighteens}}
+      <div class="row mt-50">
+        <div class="stats">
+          <p>Scoring - {{scoringAvg18}}</p>
+          <p>Fwy - {{percentformat fwyCountAvg18 fwyTotalAvg18}}%</p>
+          <p>Gir - {{percentformat girCountAvg18 girTotalAvg18}}%</p>
+          <p>Putts - {{puttsAvg18}}</p>
+        </div>
+        {{#each eighteens as |round|}}
+          {{card-detail round=round}}
+        {{/each}}
+      </div>
+    {{/if}}
+
+    <div class="mt-50">
+      <hr>
     </div>
     
+  {{#if nines}}
     <div class="row mt-50">
+      <div class="stats">
+        <p>Scoring - {{scoringAvg9}}</p>
+        <p>Fwy - {{percentformat fwyCountAvg9 fwyTotalAvg9}}%</p>
+        <p>Gir - {{percentformat girCountAvg9 girTotalAvg9}}%</p>
+        <p>Putts - {{puttsAvg9}}</p>
+      </div>
       {{#each nines as |round|}}
         {{card-detail round=round}}        
-    {{/each}}
-  </div>
-
-    
+      {{/each}}
+    </div>
+  {{/if}}

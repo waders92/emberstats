@@ -1,14 +1,17 @@
 <div class="col-sm-3 panel panel-default custom-panel">
-          <div class="panel-heading"><b>{{round.courseName}}</b>
-            {{#if (isnine round.holesPlayed)}}
-              <img class="hole-num-img" src="/assets/images/number-9.png">
-            {{else}}
-              <img class="hole-num-img" src="/assets/images/number-18.png">
-            {{/if}}
-          </div>
-          <div class="panel-body">
+          <div class="panel-heading"><b>{{round.courseName}}</b></div>
+          <div class="panel-body row">
+            <div class="col-md-6">
               <p>{{dateformat round.datePlayed}}</p>
-              <hr>
+            </div>
+            <div class="col-md-6">
+              {{#if (isnine round.holesPlayed)}}
+                <img class="hole-num-img" src="/assets/images/nine.png">
+              {{else}}
+                <img class="hole-num-img" src="/assets/images/eighteen.png">
+              {{/if}}
+            </div>
+            <hr>
           </div>
           <div class="row mb-25">
               <div class="col-sm-4 metric">
