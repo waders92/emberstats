@@ -6,9 +6,13 @@
           <p>Gir - {{percentformat girCountAvg18 girTotalAvg18}}%</p>
           <p>Putts - {{puttsAvg18}}</p>
         </div>
+     
         {{#each eighteens as |round|}}
-          {{card-detail round=round}}
+          {{#link-to 'rounds.show' round}}
+            {{card-detail round=round}}
+          {{/link-to}}
         {{/each}}
+
       </div>
     {{/if}}
 
@@ -24,8 +28,11 @@
         <p>Gir - {{percentformat girCountAvg9 girTotalAvg9}}%</p>
         <p>Putts - {{puttsAvg9}}</p>
       </div>
+    
       {{#each nines as |round|}}
-        {{card-detail round=round}}        
+        {{#link-to 'rounds.show' round}}
+          {{card-detail round=round}}  
+        {{/link-to}}      
       {{/each}}
     </div>
   {{/if}}

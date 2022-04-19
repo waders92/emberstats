@@ -7,9 +7,14 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('home', {path: '/'});
+  this.route('home', { path: '/' });
   this.route('dashboard');
   this.route('new-round');
+  this.route('rounds', function() {
+    this.route('show', {path: ':id'});
+    this.route('edit', {path: ':id/edit'});
+    this.route('destroy', {path: ':id/destroy'});
+  });
 });
 
 export default Router;
