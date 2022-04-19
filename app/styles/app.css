@@ -252,6 +252,10 @@ html, body {
 		margin-bottom: 25px;
 	}
 
+	.mt-50 {
+		margin-top: 50px;
+	}
+
 	td, th { padding: 8px; padding: .5rem;
 	}
 	

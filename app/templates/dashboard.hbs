@@ -20,11 +20,7 @@
     </div>
     {{#each months as |month|}}
       <div id="{{month}}" class="tab-pane fade">
-          {{#each model as |round|}}
-            {{#if (ismonthlyround month round)}}
-              {{card-overview round=round}}
-            {{/if}}
-          {{/each}}
+          {{card-overview model=model month=month}}
       </div>
     {{/each}}
   </div>
