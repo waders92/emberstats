@@ -8,7 +8,6 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('home', { path: '/' });
-  this.route('dashboard');
   this.route('new-round');
   this.route('rounds', function() {
     this.route('show', {path: ':id'});
