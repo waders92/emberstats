@@ -1,2 +1,30 @@
-<h3>{{model.courseName}}</h3>
+<h2>{{model.courseName}}</h2>
 <hr>
+<div class="row mb-100 mt-50">
+    <div class="col-md-4 show-stat">
+        <h2>{{model.score}}</h2>
+        <p>Score</p>
+    </div>
+    <div class="col-md-4 show-stat">
+        <h2>{{percentformat model.fwyCount model.fwyTotal}}%</h2>
+        <p>Fwy</p>
+    </div>
+    <div class="col-md-4 show-stat">
+        <h2>{{percentformat model.girCount model.girTotal}}%</h2>
+        <p>Gir</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 show-stat">
+        <h2>{{model.putts}}</h2>
+        <p>Putts</p>
+    </div>
+    <div class="col-md-4 show-stat">
+        <h2>{{missdir model.fwyMissDir}}</h2>
+        <p>Fwy Miss Dir</p>       
+    </div>
+    <div class="col-md-4 show-stat">
+        <h2>{{missdir model.greenMissDir}}</h2>
+        <p>Gir Miss Dir</p>       
+    </div>
+</div>
