@@ -1,0 +1,18 @@
+<div class="row">
+    {{#if eighteens}}
+    <div class="col-md-6">
+        <p>Scoring - {{scoringAvg18}}</p>
+        <p>Fwy 18 - {{percentformat fwyCountAvg18 fwyTotalAvg18}}%</p>
+        <p>Gir 18 - {{percentformat girCountAvg18 girTotalAvg18}}%</p>
+        <p>Putts 18 - {{puttsAvg18}}</p>
+    </div>
+    {{/if}}
+    {{#if nines}}
+    <div class="col-md-6">
+        <p>Scoring - {{scoringAvg9}}</p>
+        <p>Fwy 9 - {{percentformat fwyCountAvg9 fwyTotalAvg9}}%</p>
+        <p>Gir 9 - {{percentformat girCountAvg9 girTotalAvg9}}%</p>
+        <p>Putts 9 - {{puttsAvg9}}</p>
+    </div>
+    {{/if}}
+</div>

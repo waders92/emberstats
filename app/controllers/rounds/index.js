@@ -18,5 +18,5 @@ export default Controller.extend({
         return months;
     }),
 
-    currentYear: new Date().getFullYear()
+    currentYear: new Date().getFullYear(),
 });
