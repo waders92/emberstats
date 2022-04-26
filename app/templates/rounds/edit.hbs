@@ -1,0 +1,67 @@
+<div>
+    <h3>{{title}}</h3>
+    <hr>
+</div>
+<div class="testbox">
+  <form action="/">
+    <div class="row">
+        <div class="col-md-6 item">
+            <p>Course</p>
+            <div>
+            {{input type="text" name="name" placeholder="Course Name" value=model.courseName}}
+            </div>
+        </div>
+        <div class="col-md-6 item">
+            <p>Date Played</p>
+            {{input type="date" name="name" value=model.datePlayed}}
+            <i class="fas fa-calendar-alt"></i>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 item">
+            <p>Score</p>
+            {{input type="number" name="score" value=model.score}}
+        </div>
+        <div class="col-md-3 item">
+            <p>Putts Total</p>
+            {{input type="number" name="putts" value=model.putts}}
+        </div>
+        <div class="col-md-6 item">
+        <p>Holes Played</p>
+           {{input type="text" name="holesPlayed" value=model.holesPlayed disabled=true}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 item">
+            <p>Greens Hit</p>
+            {{input type="number" name="greenshit" value=model.girCount}}
+        </div>
+        <div class="col-md-3 item">
+            <p>Greens Total</p>
+            {{input type="number" name="greenstotal" value=model.girTotal}}
+        </div>
+        <div class="col-md-6 item">
+            <p>Greens Miss Direction</p>
+              {{input type="text" name="girMiss" value=model.greenMissDir disabled=true}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 item">
+            <p>Fairways Hit</p>
+            {{input type="number" name="fwy" value=model.fwyCount}}
+        </div>
+        <div class="col-md-3 item">
+            <p>Fairways Total</p>
+            {{input type="number" name="fwystotal" value=model.fwyTotal}}
+        </div>
+        <div class="col-md-6 item">
+            <p>Fairway Miss Direction</p>
+              {{input type="text" name="fwyMiss" value=model.fwyMissDir disabled=true}}
+        </div>
+    </div>
+    <div class="btn-block new-round-form-buttons">
+        <button type="submit" href="/" {{action 'updateRound'}} disabled={{this.formInvalid}}>Update</button>
+        <button class="cancel-new-round" {{action 'clearForm'}}>{{#link-to 'rounds' preventDefault=false}}Cancel{{/link-to}}</button>
+    </div>
+  </form>
+</div>
