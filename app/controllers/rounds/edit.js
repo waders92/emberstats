@@ -7,7 +7,7 @@ export default Controller.extend({
     actions: {
         updateRound() {
             const model = this.get('model');
-            const updatedRound = this.store.findRecord('round', model.id).then((round) => {
+            this.store.findRecord('round', model.id).then((round) => {
                 round.save();
                 this.transitionToRoute('rounds');
             });
