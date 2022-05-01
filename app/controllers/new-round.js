@@ -35,7 +35,7 @@ export default Controller.extend({
     actions: {
         saveRound() {
             const courseName = this.get('courseName');
-            const datePlayed = this.get('datePlayed');
+            const datePlayed = this.get('datePlayed').replace(/-/g, '\/');
             const score = this.get('score');
             const putts = this.get('putts');
             const holesPlayed = this.get('holesPlayed');
@@ -60,8 +60,8 @@ export default Controller.extend({
                 fwyMissDir
             });
 
-            newRound.save().then(response => {
-                this.transitionToRoute('rounds');
+            newRound.save().then(() => {
+                window.location.href = 'rounds';
             });
         },
 

@@ -16,7 +16,7 @@ function missDir(params) {
         miss = 'Long';
         break;
        default:
-        miss = dir;
+        miss = '';
         break;
   }
 
