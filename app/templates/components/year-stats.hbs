@@ -2,19 +2,21 @@
     {{#if eighteens}}
     <div class="col-md-10 stats">
         <p><b>Yearly Averages (18 Holes)</b>:</p>
-        <p>Scoring - {{scoringAvg18}}</p>
+        <p>Rounds Played - {{ eighteens.length}}</p>
+        <p>Scoring - {{round scoringAvg18}}</p>
         <p>Fwy - {{percentformat fwyCountAvg18 fwyTotalAvg18}}%</p>
         <p>Gir - {{percentformat girCountAvg18 girTotalAvg18}}%</p>
-        <p>Putts - {{puttsAvg18}}</p>
+        <p>Putts - {{round puttsAvg18}}</p>
     </div>
     {{/if}}
     {{#if nines}}
     <div class="col-md-10 stats">
         <p><b>Yearly Averages (9 Holes)</b>:</p>
-        <p>Scoring - {{scoringAvg9}}</p>
+        <p>Rounds Played - {{ nines.length}}</p>
+        <p>Scoring - {{round scoringAvg9}}</p>
         <p>Fwy - {{percentformat fwyCountAvg9 fwyTotalAvg9}}%</p>
         <p>Gir - {{percentformat girCountAvg9 girTotalAvg9}}%</p>
-        <p>Putts - {{puttsAvg9}}</p>
+        <p>Putts - {{round puttsAvg9}}</p>
     </div>
     {{/if}}
 </div>
